@@ -7,7 +7,10 @@ class Program
         Console.Write("What is your grade percentage? ");
         string userInput = Console.ReadLine();
         int gradePercentage = int.Parse(userInput);
+        int plusMinus = gradePercentage % 10;
+        string plusMinusAnswer = plusMinus.ToString();
         string finalGrade = "E";
+
         if (gradePercentage >= 90)
         {
             finalGrade = "A";
@@ -28,8 +31,29 @@ class Program
         {
             finalGrade = "F";
         }
+
+        if (plusMinus <= 3)
+        {
+           plusMinusAnswer = "-";
+        }
+        else if (plusMinus >= 7)
+        {
+           plusMinusAnswer = plusMinus.ToString();
+           plusMinusAnswer = "+";
+        }
+
+        if (gradePercentage >= 93)
+        {
+            plusMinusAnswer = "";
+        }
+        // for the record I think there should be an "A+"
         
-        Console.WriteLine($"Your grade is an {finalGrade}.");
+        if (finalGrade == "F")
+        {
+            plusMinusAnswer = "";
+        }
+
+        Console.WriteLine($"Your grade is an {finalGrade}{plusMinusAnswer}.");
 
         if (gradePercentage >= 70)
         {
