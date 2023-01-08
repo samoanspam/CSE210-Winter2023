@@ -7,33 +7,29 @@ class Program
         Console.Write("What is your grade percentage? ");
         string userInput = Console.ReadLine();
         int gradePercentage = int.Parse(userInput);
-
-        if (gradePercentage > 90)
+        string finalGrade = "E";
+        if (gradePercentage >= 90)
         {
-            string finalGrade = "A";
-            Console.WriteLine($"Your grade is an {finalGrade}. Amazing Job! ");
+            finalGrade = "A";
         }
-        else if (gradePercentage > 80)
+        else if (gradePercentage >= 80)
         {
-            string finalGrade = "B";
-            Console.WriteLine($"Your grade is an {finalGrade}. Good Job! ");
+            finalGrade = "B";
         }
-        else if (gradePercentage > 70)
+        else if (gradePercentage >= 70)
         {
-            string finalGrade = "C";
-            Console.WriteLine($"Your grade is an {finalGrade}. Alright Job! ");
+            finalGrade = "C";
         }
-        else if (gradePercentage > 60)
+        else if (gradePercentage >= 60)
         {
-            string finalGrade = "D";
-            Console.WriteLine($"Your grade is an {finalGrade}. Not Good Job! ");
+            finalGrade = "D";
         }
         else
         {
-            string finalGrade = "F";
-            Console.WriteLine($"Your grade is an {finalGrade}. Bad Job! ");
+            finalGrade = "F";
         }
-
+        
+        Console.WriteLine($"Your grade is an {finalGrade}.");
 
         if (gradePercentage >= 70)
         {
