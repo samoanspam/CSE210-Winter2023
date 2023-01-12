@@ -18,6 +18,7 @@ class Program
         }
         Console.WriteLine(numbers.Count - 1);
         int listLength = int.Parse(Console.ReadLine());
+        
 
         // my code stops right here at line 19 and im not sure why
 
