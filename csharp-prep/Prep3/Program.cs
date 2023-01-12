@@ -6,13 +6,14 @@ class Program
     {
     Random randomGenerator = new Random();
 
-    int actualNumber = randomGenerator.Next(1,101);
     int guess = -1;
-    int count = 1;
+
     string playAgain = "yes";
     
     while (playAgain == "yes")
     {
+        int actualNumber = randomGenerator.Next(1,101);
+        int count = 1;
         while (guess != actualNumber)
         {
             Console.Write("Guess a number 1-100: ");
