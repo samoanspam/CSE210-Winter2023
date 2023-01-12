@@ -34,7 +34,6 @@ class Program
         Console.Write("Do you want to play again? ");
         playAgain = Console.ReadLine().ToLower();
     }
-    
     Console.WriteLine($"It took you {count} time(s) to guess it! ");
     }
 }
