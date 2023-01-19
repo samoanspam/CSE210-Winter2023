@@ -19,5 +19,12 @@ class Program
         job2._endYear = 2023;
 
         job2.DisplayJobDetails();
+
+        Resume person = new Resume();
+        person._name = "Teia Patane";
+        person._jobs.Add(job1);
+        person._jobs.Add(job2);
+
+        person.Display();
     }
 }
