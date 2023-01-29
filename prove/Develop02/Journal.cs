@@ -16,10 +16,10 @@ public void Menu()
                 
                 break;
             case "2":
-                
+                DeleteJournal();
                 break;
             case "3":
-
+                AddEntry();
                 break;
 
         }
@@ -61,27 +61,37 @@ public string MenuAction()
 
 
 
-// public string AddEntry()
-// {
-//     System.Console.WriteLine("What's on your mind today? (Type 'thanks' when you're done) ");
+public string AddEntry()
+{
+    System.Console.WriteLine("What's on your mind today? (Type 'thanks' when you're done) ");
 
-//     string journalEntry = "";
-//     bool keepGoing = true;
-//     while (keepGoing)
-//     {
-//         string line = Console.ReadLine();
-//         if (line.ToLower() == "thanks")
-//         {
-//             keepGoing = false;
-//         }
-//         else
-//         {
-//             journalEntry += line;
-//         }
-//     }
+    string journalEntry = "";
+    bool keepGoing = true;
+    while (keepGoing)
+    {
+        string line = Console.ReadLine();
+        if (line.ToLower() == "thanks")
+        {
+            keepGoing = false;
+        }
+        else
+        {
+            journalEntry += line;
+        }
+    }
+    File.AppendAllText(JournalFile, $"Entry: {journalEntry}");
+    System.Console.WriteLine("Your Journal has been updated! ");
+
+    return "";
+}
 
 
-// }
 
+public string DeleteJournal()
+{
+File.WriteAllText(JournalFile, String.Empty);
+System.Console.WriteLine("All data in your Journal has been cleared. ");
 
+return "";
+}
 }
