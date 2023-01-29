@@ -4,6 +4,8 @@ class Journal
 {
     public string JournalFile = "Journal.txt";
 
+
+
 public void Menu()
 {
     string choice;
@@ -13,7 +15,7 @@ public void Menu()
         switch (choice)
         {
             case "1":
-                
+                DislpayJournal();
                 break;
             case "2":
                 DeleteJournal();
@@ -27,6 +29,7 @@ public void Menu()
     while (choice != "4");
 
 }
+
 
 
 public string MenuAction()
@@ -61,7 +64,28 @@ public string MenuAction()
 
 
 
-public string AddEntry()
+public void CreateFile()
+{
+    if (!System.IO.File.Exists(JournalFile))
+    {
+        File.CreateText(JournalFile);
+    }
+}
+
+
+
+public void DislpayJournal()
+{
+    System.Console.WriteLine("Welcome to your journal! Write in me some more! ");
+    
+    string entries = File.ReadAllText(JournalFile);
+    System.Console.WriteLine(entries);
+
+}
+
+
+
+public void AddEntry()
 {
     System.Console.WriteLine("What's on your mind today? (Type 'thanks' when you're done) ");
 
@@ -82,16 +106,16 @@ public string AddEntry()
     File.AppendAllText(JournalFile, $"Entry: {journalEntry}");
     System.Console.WriteLine("Your Journal has been updated! ");
 
-    return "";
+    return;
 }
 
 
 
-public string DeleteJournal()
+public void DeleteJournal()
 {
 File.WriteAllText(JournalFile, String.Empty);
 System.Console.WriteLine("All data in your Journal has been cleared. ");
 
-return "";
+return;
 }
 }
