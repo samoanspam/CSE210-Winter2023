@@ -43,11 +43,11 @@ class Program
             {
                 Console.Write("Enter the filename: ");
                 string fileName = Console.ReadLine();
-                SaveJournal();
+                // SaveJournal();
             }
             else if (choice == "4")
             {
-                DeleteJournal();
+                // DeleteJournal();
             }
             else if (choice == "5")
             {
@@ -89,14 +89,14 @@ class Program
         }
     }
 
-    static void SaveJournal()
-    {
-        File.AppendAllText(JournalFile);
-    }
+    // static void SaveJournal()
+    // {
+    //     File.AppendAllText(JournalFile);
+    // }
 
-    static void DeleteJournal()
-    {
-        File.WriteAllText(JournalFile, String.Empty);
-        System.Console.WriteLine("All contents of your Journal has been cleared. ");
-    }
+    // static void DeleteJournal()
+    // {
+    //     File.WriteAllText(JournalFile, String.Empty);
+    //     System.Console.WriteLine("All contents of your Journal has been cleared. ");
+    // }
 }
