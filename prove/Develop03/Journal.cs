@@ -3,7 +3,7 @@ class Journal
     public string Prompt { get; set; }
     public string Response { get; set; }
     public DateTime Date { get; set; }
-    public string JournalFile = "Journal.txt";
+    public static string JournalFile = "Journal.txt";
 
     public static List<Journal> journal = new List<Journal>();
 
@@ -15,5 +15,20 @@ class Journal
             Console.WriteLine("Response: " + entry.Response);
             Console.WriteLine("Date: " + entry.Date);
         }
+    }
+
+    static public void SaveJournal()
+    {
+        // foreach (string entry in journal)
+        {
+            File.AppendAllText(JournalFile, "test");
+        }
+    }
+
+
+    static public void DeleteJournal()
+    {
+        File.WriteAllText(JournalFile, String.Empty);
+        System.Console.WriteLine("All contents of your Journal has been cleared. ");
     }
 }
