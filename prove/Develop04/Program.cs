@@ -11,10 +11,14 @@ class Program
             "off the natural man and becometh a saint through the atonement of Christ the Lord, and becometh as a child, submissive, meek, humble, patient, full of love, willing to submit to all ",
             "things which the Lord seeth fit to inflict upon him, even as a child doth submit to his father"
         };
-        
-        Scripture scripture = new Scripture("test", verses);
+
+        // Random number of words chosen randomly from each row at random. 
+        Random random = new Random();
+        int number = random.Next(1,4);
+
+        Scripture scripture = new Scripture(verses);
         Scripture.Display();
-        Scripture.HideWords(3);
+        Scripture.HideWords(number);
         Scripture.IsAllHidden();
     }
 }
