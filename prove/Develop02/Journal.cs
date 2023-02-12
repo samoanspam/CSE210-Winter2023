@@ -1,3 +1,6 @@
+using System;
+using System.IO;
+
 class Journal
 {
     public string Prompt { get; set; }
