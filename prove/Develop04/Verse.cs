@@ -85,4 +85,13 @@ class Verse
 
         return false;
     }
+
+    public void ClearAll()
+    {
+        foreach (Word word in _words)
+        {
+            word.Clear();
+            _hidden = true;
+        }
+    }
 }

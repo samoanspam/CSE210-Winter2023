@@ -12,11 +12,12 @@ class Word
     public Word(string text)
     {
         _text = text;
+        _hidden = false;
     }
 
     public void Display()
     {
-        if (_hidden)
+        if (_hidden == true)
         {
             foreach (char c in _text)
             {
@@ -34,10 +35,8 @@ class Word
         return _hidden;
     }
 
-    public bool Clear()
+    public void Clear()
     {
         _hidden = true;
-        
-        return _hidden;
     }
 }

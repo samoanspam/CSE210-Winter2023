@@ -12,7 +12,7 @@ class Program
             "things which the Lord seeth fit to inflict upon him, even as a child doth submit to his father"
         };
         
-        Scripture scripture = new Scripture(verses);
+        Scripture scripture = new Scripture("test", verses);
         Scripture.Display();
         Scripture.HideWords(3);
         Scripture.IsAllHidden();
