@@ -4,20 +4,21 @@ class Scripture
 {
     private static List<Verse> _verses = new List<Verse>();
     private static bool _hidden = false;
-    private static string _scriptureVerse;
+    // private static string _scriptureVerse;
 
-    public Scripture(string scriptureVerse, List<string> verses)
+    public Scripture(List<string> verses)
     {
-        _scriptureVerse = scriptureVerse;
+        // _scriptureVerse = scriptureVerse;
         foreach(string verseStr in verses)
         {
             Verse verse = new Verse(verseStr);
             _verses.Add(verse);
         }
+        _hidden = false;
     }
     public static void Display()
     {
-        System.Console.WriteLine(_scriptureVerse);
+        // System.Console.WriteLine(_scriptureVerse);
         foreach (Verse verse in _verses)
         {
             verse.Display();
