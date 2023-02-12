@@ -2,7 +2,7 @@ using System;
 
 class Verse
 {
-    private List<Word> _words;
+    private List<Word> _words = new List <Word>();
     private bool _hidden;
 
     public Verse()
@@ -11,7 +11,11 @@ class Verse
     }
     public Verse(string verse)
     {
-        _words = new List<Word>();
+        // foreach (string wordStr in verse.Split(' '))
+        // {
+        //     Word word = new Word(wordStr);
+        //     _words.Add(word);
+        // }
 
         char[] delimiterchars = {' ', ',', '.', ':', '\t'};
         string[] words = verse.Split(delimiterchars);
@@ -21,6 +25,7 @@ class Verse
             _words.Add(word);
         }
 
+        // _hidden = false;
     }
 
     public int RandomIndexes()
@@ -44,7 +49,7 @@ class Verse
     public bool HideWord()
     {
         int count = 0;
-        while (_hidden == true)
+        while (_hidden == false)
         {
             Word word = new Word();
             int index = RandomIndexes();
@@ -77,13 +82,11 @@ class Verse
                 {
                     return false;
                 }
+            }
                 _hidden = true;
 
                 return _hidden;
-            }
         }
-
-        return false;
     }
 
     public void ClearAll()
