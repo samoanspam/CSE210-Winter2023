@@ -6,6 +6,6 @@ class Program
     {
         Console.WriteLine("Hello Develop05 World!");
         Activity activity = new Activity();
-        activity.PauseAnimation();
+        activity.PauseAnimation(5);
     }
 }

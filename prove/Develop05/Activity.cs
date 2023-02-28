@@ -35,16 +35,23 @@ class Activity
         System.Console.WriteLine(_description);
     }
 
-    public void PauseAnimation()
+    public void PauseAnimation(int delay)
     {
-        int count = 0;
-        while (count < 3)
-            Console.Write("+");
+        int timer = 1;
+        double time = delay;
+        while (time > 0)
+        {
+            Console.Write("\\");
+            
+            Thread.Sleep(500);
+
+            time -= timer;
+            Console.Write("\b\b");
+            Console.Write("/");
 
             Thread.Sleep(500);
 
-            Console.Write("\b \b");
-            Console.Write("x");
-            count += 1;
+            Console.Write("\b\b"); // Erase the + character  
+        }
     }
 }
