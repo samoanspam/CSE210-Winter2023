@@ -38,13 +38,13 @@ class Activity
     public void PauseAnimation()
     {
         int count = 0;
-        while (count < 10)
+        while (count < 3)
             Console.Write("+");
 
             Thread.Sleep(500);
 
             Console.Write("\b \b");
             Console.Write("x");
-            count++;
+            count += 1;
     }
 }
