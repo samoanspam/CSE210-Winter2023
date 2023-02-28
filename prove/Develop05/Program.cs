@@ -4,8 +4,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop05 World!");
         Activity activity = new Activity();
-        activity.PauseAnimation(5);
+        ReflectionActivity RA = new ReflectionActivity();
+        ListeningActivity LA = new ListeningActivity();
+        BreathingActivity BA = new BreathingActivity();
+        RA.doIt();
+        LA.doIt();
+        BA.doIt();
     }
 }
