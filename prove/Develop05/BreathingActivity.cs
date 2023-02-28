@@ -5,7 +5,7 @@ class BreathingActivity : Activity
         // Nothing
     }
 
-    public BreathingActivity(int duration) : base("Breath", duration, "welcome the B", "endding B", "peepeepoopoo")
+    public BreathingActivity(int duration) : base("Breath", duration, "Welcome", "Ending", "peepeepoopoo")
     {
 
     }

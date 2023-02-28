@@ -5,7 +5,7 @@ class ReflectionActivity : Activity
         // Nothing
     }
 
-    public ReflectionActivity(int duration) : base("Breath", duration, "welcome the B", "endding B", "peepeepoopoo")
+    public ReflectionActivity(int duration) : base("Reflect", duration, "Welcome", "Ending", "peepeepoopoo")
     {
 
     }

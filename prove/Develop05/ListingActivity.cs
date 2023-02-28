@@ -5,7 +5,7 @@ class ListingActivity : Activity
         // Nothing
     }
 
-    public ListingActivity(int duration) : base("Breath", duration, "welcome the B", "endding B", "peepeepoopoo")
+    public ListingActivity(int duration) : base("List", duration, "Welcome", "Ending", "peepeepoopoo")
     {
 
     }
