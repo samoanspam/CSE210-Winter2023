@@ -1,11 +1,11 @@
-class ListeningActivity : Activity
+class ListingActivity : Activity
 {
-    public ListeningActivity()
+    public ListingActivity()
     {
         // Nothing
     }
 
-    public ListeningActivity(int duration) : base("Breath", duration, "welcome the B", "endding B", "peepeepoopoo")
+    public ListingActivity(int duration) : base("Breath", duration, "welcome the B", "endding B", "peepeepoopoo")
     {
 
     }

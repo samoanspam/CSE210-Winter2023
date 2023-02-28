@@ -4,12 +4,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        Activity activity = new Activity();
-        ReflectionActivity RA = new ReflectionActivity();
-        ListeningActivity LA = new ListeningActivity();
-        BreathingActivity BA = new BreathingActivity();
-        RA.doIt();
-        LA.doIt();
-        BA.doIt();
+        Activity AT = new Activity();
+        ReflectionActivity ReflectA = new ReflectionActivity();
+        ListingActivity ListA = new ListingActivity();
+        BreathingActivity BreathA = new BreathingActivity();
+        ReflectA.doIt();
+        ListA.doIt();
+        BreathA.doIt();
     }
 }
