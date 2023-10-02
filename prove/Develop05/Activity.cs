@@ -21,18 +21,13 @@ class Activity
         _goodbyeMessage = goodbyeMessage;
     }
 
-    public void DisplayBeginning()
+    public void Display()
     {
+        System.Console.WriteLine(_name);
+        System.Console.WriteLine (_description);
         System.Console.WriteLine(_welcomeMessage);
-    }
-
-    public void DisplayEnding()
-    {
         System.Console.WriteLine(_goodbyeMessage);
-    }
-    public void DisplayPrompt()
-    {
-        System.Console.WriteLine(_description);
+        System.Console.WriteLine(_duration);  
     }
 
     public void PauseAnimation(int delay)
